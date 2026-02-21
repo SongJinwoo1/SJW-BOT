@@ -21,7 +21,8 @@ async function startSJW() {
 
     // --- الربط برقم هاتفك المصري الجديد ---
     if (!sock.authState.creds.registered) {
-        const phoneNumber = "201055719273"; // رقمك المعتمد حالياً [cite: 2026-02-21]
+        const phoneNumber = "201055719273";
+
         setTimeout(async () => {
             let code = await sock.requestPairingCode(phoneNumber);
             console.log(`\n\n=== كود ربط الواتساب الخاص بك هو: ${code} ===\n\n`);
